@@ -30,7 +30,7 @@ def webhook():
     return r
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") != "bankrate":
+    if req.get("result").get("action") != "interest":
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
