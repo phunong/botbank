@@ -12,7 +12,7 @@ from flask import make_response
 app = Flask(__name__)
 @app.route('/welcome')
 def welcome():
-    ruturn 'Welcome to service!'
+    return 'Welcome to service!'
 
 # @app.route('/webhook', methods=['POST'])
 # def webhook():
