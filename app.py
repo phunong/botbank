@@ -10,7 +10,9 @@ from flask import make_response
 
 # Flask app should start in global layout
 app = Flask(__name__)
-
+@app.route('/welcome')
+def welcome():
+    ruturn "Welcome to service!"
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
@@ -25,6 +27,7 @@ def webhook():
     print(res)
     r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
+    print("Hi my is Phu")
     return r
 
 def makeWebhookResult(req):
